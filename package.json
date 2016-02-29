@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server.js",
     "test": "lab -c -L",
-    "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+    "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html",
+    "citestcoverage": "lab -r lcov | coveralls"
   },
   "repository": {
     "type": "git",
