@@ -25,6 +25,12 @@ const manifest = {
     }],
     registrations: [{
         plugin: './server/api/make-change'
+    }, {
+        plugin: 'inert'
+    }, {
+        plugin: 'vision'
+    }, {
+        plugin: 'lout'
     }]
 };
 

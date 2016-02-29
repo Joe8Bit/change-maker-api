@@ -25,7 +25,10 @@
     "glue": "3.x.x",
     "hapi": "13.x.x",
     "hoek": "3.x.x",
-    "joi": "^8.0.3"
+    "inert": "^3.2.0",
+    "joi": "^8.0.3",
+    "lout": "^9.0.0",
+    "vision": "^4.0.1"
   },
   "devDependencies": {
     "code": "2.x.x",

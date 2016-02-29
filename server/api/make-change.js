@@ -15,7 +15,10 @@ exports.register = function (server, options, next) {
                 query: {
                     total: Joi.string().min(1).required()
                 }
-            }
+            },
+            description: 'Returns an object corresponding to the least possible number of coins for the given total',
+            notes: `The following coin denominations are used [${denominations.join(', ')}]}`,
+            tags: ['api', 'change']
         },
         handler: function (request, reply) {
 
