@@ -7,6 +7,7 @@
 [![Dependency status](https://david-dm.org/joe8bit/change-maker-api.svg)](https://david-dm.org/Joe8bit/change-maker-api)
 [![Dependency status](https://david-dm.org/Joe8bit/change-maker-api/dev-status.svg)](https://david-dm.org/Joe8bit/change-maker-api#info=devDependencies&view=table)
 
+[https://change-maker-api.herokuapp.com](https://change-maker-api.herokuapp.com)
 
 The Change Maker API is a JSON API powered by [change-maker](https://github.com/Joe8Bit/change-maker). It is used as a demonstration for how to build and deploy a NodeJS API application to Heroku.
 
@@ -45,4 +46,3 @@ All contributors will abide by the `CODE_OF_CONDUCT.md`.
 ## License
 
 MIT
-
