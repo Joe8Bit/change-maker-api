@@ -4,8 +4,12 @@ machine:
 test:
   pre:
     - npm install -g coveralls
+    - npm install -g codeclimate-test-reporter
   override:
     - npm run citestcoverage
+  post:
+    - coveralls < test/artifacts/lcov.info
+    - codeclimate-test-reporter < test/artifacts/lcov.info
 deployment:
   staging:
     branch: master
