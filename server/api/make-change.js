@@ -23,7 +23,10 @@ exports.register = function (server, options, next) {
         },
         handler: function (request, reply) {
 
-            reply(ChangeMaker(request.query.total, denominations));
+            reply({
+                total: request.query.total,
+                change: ChangeMaker(request.query.total, denominations)
+            });
 
         }
     });
