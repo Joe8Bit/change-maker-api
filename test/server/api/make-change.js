@@ -48,4 +48,22 @@ lab.experiment('MakeChangePlugin Plugin', () => {
 
     });
 
+    lab.test('it returns 400 if no total query param is supplied', (done) => {
+
+        server.inject({
+            method: 'GET',
+            url: '/change'
+        }, (response) => {
+
+            Code.expect(response.result).to.be.an.object();
+            Code.expect(response.result.error).to.equal('Bad Request');
+            Code.expect(response.result.message).to.equal('child "total" fails because ["total" is required]');
+            Code.expect(response.result.validation.source).to.equal('query');
+            Code.expect(response.result.validation.keys[0]).to.equal('total');
+            Code.expect(response.statusCode).to.equal(400);
+            done();
+
+        });
+
+    });
 });
