@@ -2,8 +2,9 @@
 
 const ChangeMaker = require('change-maker');
 const Joi = require('joi');
+const Config = require('../../config');
 
-const denominations = [100, 50, 20, 5, 10, 1];
+const denominations = Config.get('/').denominations;
 
 exports.register = function (server, options, next) {
 
