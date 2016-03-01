@@ -1,0 +1,17 @@
+[{
+    "currency_code": "usd",
+    "name": "US Dollar",
+    "denominations": [1, 5, 10, 25, 50, 100]
+}, {
+    "currency_code": "gbp",
+    "name": "British Pound",
+    "denominations": [1, 2, 5, 10, 20, 50, 100, 200]
+}, {
+    "currency_code": "eur",
+    "name": "Euro",
+    "denominations": [1, 2, 5, 10, 20, 50, 100, 200]
+}, {
+    "currency_code": "jpy",
+    "name": "Japanese Yen",
+    "denominations": [1, 5, 10, 50, 100, 500]
+}]

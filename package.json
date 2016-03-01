@@ -4,7 +4,7 @@
   "description": "A demo API that implements the change making algoritm problem",
   "main": "index.js",
   "scripts": {
-    "start": "PORT=8080 nodemon server.js",
+    "start": "PORT=8080 BASE_URL=http://localhost:8080 nodemon server.js",
     "test": "lab -c -L",
     "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html",
     "citestcoverage": "lab -r lcov > lcov.info"
@@ -28,6 +28,7 @@
     "hoek": "3.x.x",
     "inert": "^3.2.0",
     "joi": "^8.0.3",
+    "lodash": "^4.5.1",
     "vision": "^4.0.1"
   },
   "devDependencies": {
