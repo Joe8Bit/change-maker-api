@@ -14,7 +14,11 @@ exports.register = function (server, options, next) {
         config: {
             validate: {
                 query: {
-                    total: Joi.string().min(1).required()
+                    total: Joi
+                            .string()
+                            .min(1)
+                            .required()
+                            .description('the total amount to get change for')
                 }
             },
             description: 'Returns an object corresponding to the least possible number of coins for the given total',
