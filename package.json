@@ -7,7 +7,7 @@
     "start": "PORT=8080 nodemon server.js",
     "test": "lab -c -L",
     "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html",
-    "citestcoverage": "lab -r lcov > test/artifacts/lcov.info"
+    "citestcoverage": "lab -r lcov > lcov.info"
   },
   "repository": {
     "type": "git",
