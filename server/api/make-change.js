@@ -4,7 +4,7 @@ const ChangeMaker = require('change-maker');
 const Joi = require('joi');
 const Config = require('../../config');
 
-const denominations = Config.get('/').denominations;
+const denominations = Config.get('/denominations');
 
 exports.register = function (server, options, next) {
 
