@@ -18,7 +18,7 @@ There is only a single route exposed by the application:
 
 `/change?total={total}` - Which given an amount of currency (e.g. `$12.55`) will return an object comprised of the least possible number of coins to make up that denomination
 
-Documentation for this route is generated automatically and [exposed here](https://change-maker-api.herokuapp.com/docs).
+Documentation for this route is generated automatically and [exposed here](https://change-maker-api.herokuapp.com/documentation).
 
 **Note:** the denominations are currently a constant defined in `./server/api/make-change.js`
 
