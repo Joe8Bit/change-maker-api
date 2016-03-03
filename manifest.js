@@ -33,8 +33,6 @@ const manifest = {
     }, {
         plugin: 'vision'
     }, {
-        plugin: 'lout'
-    }, {
         plugin: 'hapi-swagger'
     }]
 };
