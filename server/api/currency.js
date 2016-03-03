@@ -7,7 +7,9 @@ const Config = require('../../config');
 
 const currencies = Config.get('/currencies');
 const currencyCodes = currencies.map((currency) => {
+
     return currency.currency_code;
+
 });
 
 exports.register = function (server, options, next) {
@@ -23,8 +25,10 @@ exports.register = function (server, options, next) {
         handler: function (request, reply) {
 
             reply(currencies.map((curr) => {
-                curr._link = `${Config.get('/baseURL')}/currencies/${curr.currency_code}`;
+
+                curr._link = `${Config.get('/baseURL')}/v1/currencies/${curr.currency_code}`;
                 return curr;
+
             }));
 
         }
@@ -49,8 +53,8 @@ exports.register = function (server, options, next) {
         },
         handler: function (request, reply) {
 
-            let currency = _.find(currencies, { currency_code: request.params.currency });
-            currency['_change-link'] = `${Config.get('/baseURL')}/currencies/${request.params.currency}/change`;
+            const currency = _.find(currencies, { currency_code: request.params.currency });
+            currency['_change-link'] = `${Config.get('/baseURL')}/v1/currencies/${request.params.currency}/change`;
 
             reply(currency);
 
@@ -82,8 +86,7 @@ exports.register = function (server, options, next) {
         },
         handler: function (request, reply) {
 
-            let currency = _.find(currencies, { currency_code: request.params.currency });
-            console.log('++++++++++', currency)
+            const currency = _.find(currencies, { currency_code: request.params.currency });
 
             reply({
                 currency_code: currency.currency_code,
