@@ -9,6 +9,7 @@ const criteria = {
 const config = {
     $meta: 'This file configures the Make Change API',
     projectName: 'make-change-api',
+    baseURL: process.env.BASE_URL,
     port: {
         api: {
             $filter: 'env',
@@ -16,7 +17,8 @@ const config = {
             $default: process.env.PORT
         }
     },
-    denominations: [100, 50, 20, 5, 10, 1]
+    denominations: [100, 50, 20, 5, 10, 1],
+    currencies: require('./data/currencies')
 };
 
 const store = new Confidence.Store(config);

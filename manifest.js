@@ -16,6 +16,9 @@ const manifest = {
         connections: {
             routes: {
                 security: true
+            },
+            router: {
+                stripTrailingSlash: true
             }
         }
     },
@@ -24,7 +27,7 @@ const manifest = {
         labels: ['api']
     }],
     registrations: [{
-        plugin: './server/api/make-change'
+        plugin: './server/api/currency'
     }, {
         plugin: 'inert'
     }, {
