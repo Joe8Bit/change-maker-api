@@ -14,14 +14,21 @@ The Change Maker API is a JSON API powered by [change-maker](https://github.com/
 
 ### API
 
-There is only a single route exposed by the application:
+The API exposes three routes:
 
-`/change?total={total}` - Which given an amount of currency (e.g. `$12.55`) will return an object comprised of the least possible number of coins to make up that denomination
+```
+GET /currencies
+```
+```
+GET /currencies/{currency_code}
+```
+```
+GET /currencies/{currency_code}/change
+```
 
-Documentation for this route is generated automatically and [exposed here](https://change-maker-api.herokuapp.com/documentation).
+Documentation for these routes are generated automatically and [exposed here](https://change-maker-api.herokuapp.com/documentation).
 
-**Note:** the denominations are currently a constant defined in `./server/api/make-change.js`
-
+**Note:** the denominations and currencies are defined in `./data/currencies.json`
 
 ### Development
 
