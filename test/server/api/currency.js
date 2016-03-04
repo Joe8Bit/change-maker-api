@@ -10,7 +10,6 @@ const CurrencyPlugin = require('../../../server/api/currency');
 const lab = exports.lab = Lab.script();
 let server;
 
-const Currencies = require('../../../data/currencies');
 
 lab.beforeEach((done) => {
 

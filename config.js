@@ -16,9 +16,7 @@ const config = {
             test: 9090,
             $default: process.env.PORT
         }
-    },
-    denominations: [100, 50, 20, 5, 10, 1],
-    currencies: require('./data/currencies')
+    }
 };
 
 const store = new Confidence.Store(config);

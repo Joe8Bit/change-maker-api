@@ -5,12 +5,6 @@ const Joi = require('joi');
 const _ = require('lodash');
 const Config = require('../../config');
 
-const currencies = Config.get('/currencies');
-const currencyCodes = currencies.map((currency) => {
-
-    return currency.currency_code;
-
-});
 
 exports.register = function (server, options, next) {
 
