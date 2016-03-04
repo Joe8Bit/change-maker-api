@@ -4,7 +4,7 @@ const ChangeMaker = require('change-maker');
 const Joi = require('joi');
 const _ = require('lodash');
 const Config = require('../../config');
-
+const Currencies = require('../lib/currencies');
 
 exports.register = function (server, options, next) {
 
@@ -18,9 +18,9 @@ exports.register = function (server, options, next) {
         },
         handler: function (request, reply) {
 
-            reply(currencies.map((curr) => {
+            reply(Currencies.currencies.map((curr) => {
 
-                curr._link = `${Config.get('/baseURL')}/v1/currencies/${curr.currency_code}`;
+                curr._link = `${Config.get('/baseURL')}/v1/currencies/${curr.currencyISOCode}`;
                 return curr;
 
             }));
@@ -37,7 +37,7 @@ exports.register = function (server, options, next) {
                     currency: Joi
                             .string()
                             .required()
-                            .valid(currencyCodes)
+                            .valid(Currencies.ISOCodes)
                             .description('the currency requested')
                 }
             },
@@ -47,7 +47,7 @@ exports.register = function (server, options, next) {
         },
         handler: function (request, reply) {
 
-            const currency = _.find(currencies, { currency_code: request.params.currency });
+            const currency = _.find(Currencies.currencies, { isoCode: request.params.currency.toUpperCase() });
             currency['_change-link'] = `${Config.get('/baseURL')}/v1/currencies/${request.params.currency}/change`;
 
             reply(currency);
@@ -64,7 +64,7 @@ exports.register = function (server, options, next) {
                     currency: Joi
                             .string()
                             .required()
-                            .valid(currencyCodes)
+                            .valid(Currencies.ISOCodes)
                             .description('the currency requested')
                 },
                 query: {
@@ -80,10 +80,10 @@ exports.register = function (server, options, next) {
         },
         handler: function (request, reply) {
 
-            const currency = _.find(currencies, { currency_code: request.params.currency });
+            const currency = _.find(Currencies.currencies, { isoCode: request.params.currency });
 
             reply({
-                currency_code: currency.currency_code,
+                isoCode: currency.isoCode,
                 total: request.query.total,
                 change: ChangeMaker(request.query.total, currency.denominations)
             });
