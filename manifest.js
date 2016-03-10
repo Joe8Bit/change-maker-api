@@ -15,7 +15,8 @@ const manifest = {
         },
         connections: {
             routes: {
-                security: true
+                security: true,
+                cors: true
             },
             router: {
                 stripTrailingSlash: true
