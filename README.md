@@ -32,13 +32,27 @@ Documentation for these routes are generated automatically and [exposed here](ht
 
 ### Development
 
+#### Via Docker
+
+Install and configure Docker [for your environment](https://docs.docker.com/engine/installation/).
+
+```
+git clone https://github.com/Joe8Bit/change-maker-api.git
+cd change-maker-api
+docker build -t your-name/change-maker-api .
+docker run -d -p 8080:8080 your-name/change-maker-api
+```
+
+You can also run the app without Docker via the following:
+
 ```
 git clone https://github.com/Joe8Bit/change-maker-api.git
 cd change-maker-api
 npm install
-npm test
 npm start
 ```
+
+The key difference between the two is that starting with `npm start` will run the dev server using [nodemon](https://github.com/remy/nodemon) and hot reload code.
 
 ### Testing
 
