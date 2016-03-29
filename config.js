@@ -9,12 +9,11 @@ const criteria = {
 const config = {
     $meta: 'This file configures the Make Change API',
     projectName: 'make-change-api',
-    baseURL: process.env.BASE_URL,
     port: {
         api: {
             $filter: 'env',
             test: 9090,
-            $default: process.env.PORT
+            $default: 8080
         }
     }
 };

@@ -3,7 +3,6 @@
 const ChangeMaker = require('change-maker');
 const Joi = require('joi');
 const _ = require('lodash');
-const Config = require('../../config');
 const Currencies = require('../lib/currencies');
 
 const validateInputAgainstCountryCodes = function validateInputAgainstCountryCodes() {
@@ -26,7 +25,7 @@ exports.register = function (server, options, next) {
 
             reply(Currencies.currencies.map((curr) => {
 
-                curr._link = `${Config.get('/baseURL')}/v1/currencies/${curr.currencyISOCode}`;
+                curr._link = `/v1/currencies/${curr.currencyISOCode}`;
                 return curr;
 
             }));
@@ -50,7 +49,7 @@ exports.register = function (server, options, next) {
         handler: function (request, reply) {
 
             const currency = _.find(Currencies.currencies, { isoCode: request.params.currency.toUpperCase() });
-            currency['_change-link'] = `${Config.get('/baseURL')}/v1/currencies/${request.params.currency}/change`;
+            currency['_change-link'] = `/v1/currencies/${request.params.currency}/change`;
 
             reply(currency);
 
