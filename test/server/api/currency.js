@@ -48,7 +48,7 @@ lab.experiment('CurrencyPlugin Plugin', () => {
                 Code.expect(returnedCur.fractionalUnit.name).to.equal(Currencies[index].fractionalUnit.name);
                 Code.expect(returnedCur.fractionalUnit.numberToBasic).to.equal(Currencies[index].fractionalUnit.numberToBasic);
                 Code.expect(returnedCur.denominations).to.only.include(Currencies[index].denominations);
-                Code.expect(returnedCur._link).to.equal(`${Config.get('/baseURL')}/v1/currencies/${Currencies[index].currency_code}`);
+                Code.expect(returnedCur._link).to.equal(`/v1/currencies/${Currencies[index].currency_code}`);
 
             });
 
@@ -75,7 +75,7 @@ lab.experiment('CurrencyPlugin Plugin', () => {
             Code.expect(response.result.fractionalUnit.name).to.equal(usd.fractionalUnit.name);
             Code.expect(response.result.fractionalUnit.numberToBasic).to.equal(usd.fractionalUnit.numberToBasic);
             Code.expect(response.result.denominations).to.only.include(usd.denominations);
-            Code.expect(response.result['_change-link']).to.equal(`${Config.get('/baseURL')}/v1/currencies/${usd.isoCode}/change`);
+            Code.expect(response.result['_change-link']).to.equal(`/v1/currencies/${usd.isoCode}/change`);
 
             Code.expect(response.statusCode).to.equal(200);
             done();
