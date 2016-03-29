@@ -1,0 +1,27 @@
+ignore:
+  'npm:moment:20160126':
+    - 'hapi > joi > moment':
+        reason: 'Low severity vulenerability, waiting for Hapi to upstream upstream'
+        expires: '2016-04-28T12:36:59.912Z'
+    - 'glue > hapi > joi > moment':
+        reason: 'Low severity vulenerability, waiting for Hapi to upstream upstream'
+        expires: '2016-04-28T12:36:59.912Z'
+    - 'hapi > statehood > joi > moment':
+        reason: 'Low severity vulenerability, waiting for Hapi to upstream upstream'
+        expires: '2016-04-28T12:36:59.913Z'
+    - 'glue > hapi > statehood > joi > moment':
+        reason: 'Low severity vulenerability, waiting for Hapi to upstream upstream'
+        expires: '2016-04-28T12:36:59.914Z'
+    - 'hapi > catbox > joi > moment':
+        reason: 'Low severity vulenerability, waiting for Hapi to upstream upstream'
+        expires: '2016-04-28T12:36:59.915Z'
+    - 'glue > hapi > catbox > joi > moment':
+        reason: 'Low severity vulenerability, waiting for Hapi to upstream upstream'
+        expires: '2016-04-28T12:36:59.915Z'
+    - 'hapi > heavy > joi > moment':
+        reason: 'Low severity vulenerability, waiting for Hapi to upstream upstream'
+        expires: '2016-04-28T12:36:59.916Z'
+    - 'glue > hapi > heavy > joi > moment':
+        reason: 'Low severity vulenerability, waiting for Hapi to upstream upstream'
+        expires: '2016-04-28T12:36:59.917Z'
+version: v1

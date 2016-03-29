@@ -5,6 +5,7 @@ test:
   pre:
     - npm install -g coveralls
     - npm install -g codeclimate-test-reporter
+    - npm install -g snyk
   override:
     - npm run citestcoverage
   post:
