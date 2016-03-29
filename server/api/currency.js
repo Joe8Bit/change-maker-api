@@ -6,6 +6,12 @@ const _ = require('lodash');
 const Config = require('../../config');
 const Currencies = require('../lib/currencies');
 
+const validateInputAgainstCountryCodes = function validateInputAgainstCountryCodes() {
+
+    return Joi.string().required().valid(Currencies.ISOCodes).description('the currency requested');
+
+};
+
 exports.register = function (server, options, next) {
 
     server.route({
@@ -34,11 +40,7 @@ exports.register = function (server, options, next) {
         config: {
             validate: {
                 params: {
-                    currency: Joi
-                            .string()
-                            .required()
-                            .valid(Currencies.ISOCodes)
-                            .description('the currency requested')
+                    currency: validateInputAgainstCountryCodes()
                 }
             },
             description: 'Returns the details for a requested currency',
@@ -61,11 +63,7 @@ exports.register = function (server, options, next) {
         config: {
             validate: {
                 params: {
-                    currency: Joi
-                            .string()
-                            .required()
-                            .valid(Currencies.ISOCodes)
-                            .description('the currency requested')
+                    currency: validateInputAgainstCountryCodes()
                 },
                 query: {
                     total: Joi
