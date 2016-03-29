@@ -14,7 +14,7 @@ const config = {
         api: {
             $filter: 'env',
             test: 9090,
-            $default: process.env.PORT
+            $default: 8080
         }
     }
 };
