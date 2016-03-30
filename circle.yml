@@ -1,6 +1,8 @@
 machine:
+  services:
+    - docker
   node:
-    version: 5.7.0
+    version: 5.9.0
 test:
   pre:
     - npm install -g coveralls
@@ -11,8 +13,10 @@ test:
   post:
     - coveralls < lcov.info
     - codeclimate-test-reporter < lcov.info
+    - docker build -t joe8bit/change-maker-api:$CIRCLE_SHA1 .
 deployment:
-  staging:
+  hub:
     branch: master
-    heroku:
-      appname: change-maker-api
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push joe8bit/change-maker-api:$CIRCLE_SHA1
