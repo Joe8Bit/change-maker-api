@@ -13,10 +13,10 @@ test:
   post:
     - coveralls < lcov.info
     - codeclimate-test-reporter < lcov.info
-    - docker build -t joe8bit/change-maker-api:$CIRCLE_SHA1 .
+    - docker build -t joe8bit/change-maker-api:latest .
 deployment:
   hub:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push joe8bit/change-maker-api:$CIRCLE_SHA1
+      - docker push joe8bit/change-maker-api:latest
