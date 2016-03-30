@@ -32,8 +32,6 @@ Documentation for these routes are generated automatically and [exposed here](ht
 
 ### Development
 
-#### Via Docker
-
 Install and configure Docker [for your environment](https://docs.docker.com/engine/installation/). Then build your own image:
 
 ```
