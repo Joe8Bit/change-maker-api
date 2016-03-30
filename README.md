@@ -10,7 +10,9 @@
 
 [http://change-maker-api-55d4be1f.59b82038.svc.dockerapp.io/documentation](http://change-maker-api-55d4be1f.59b82038.svc.dockerapp.io/documentation)
 
-The Change Maker API is a JSON API powered by [change-maker](https://github.com/Joe8Bit/change-maker). It is used as a demonstration for how to build and deploy a NodeJS API application into a scalable production Docker environment in AWS.
+The Change Maker API is a JSON API powered by primarily by the [change-maker](https://github.com/Joe8Bit/change-maker) NPM module. It's primary purpose is as a teaching aide to demonstrate: how to build a module and decomposed NodeJS application; and how to do continuous integration and deployment into a scalable (production) Docker environment (in AWS).
+
+This change making problem was picked to allow for the implementation of a (reasonably) complex but self contained algorithmic problem in JavaScript.
 
 ### API
 
@@ -26,9 +28,7 @@ GET /currencies/{currency_code}
 GET /currencies/{currency_code}/change
 ```
 
-Documentation for these routes are generated automatically and [exposed here](https://change-maker-api.herokuapp.com/documentation).
-
-**Note:** the denominations and currencies are defined in `./data/currencies.json`
+Documentation for these routes are generated automatically and [exposed here](http://change-maker-api-55d4be1f.59b82038.svc.dockerapp.io/documentation).
 
 ### Development
 
