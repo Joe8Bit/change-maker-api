@@ -43,6 +43,14 @@ docker build -t your-name/change-maker-api .
 docker run -d -p 8080:8080 your-name/change-maker-api
 ```
 
+or
+
+```
+docker pull joe8bit/change-maker-api
+docker run -d -p 8080:8080 joe8bit/change-maker-api
+
+```
+
 You can also run the app without Docker via the following:
 
 ```
