@@ -10,7 +10,7 @@
 
 [http://change-maker-api-55d4be1f.59b82038.svc.dockerapp.io/documentation](http://change-maker-api-55d4be1f.59b82038.svc.dockerapp.io/documentation)
 
-The Change Maker API is a JSON API powered by primarily by the [change-maker](https://github.com/Joe8Bit/change-maker) NPM module. It's primary purpose is as a teaching aide to demonstrate: how to build a module and decomposed NodeJS application; and how to do continuous integration and deployment into a scalable (production) Docker environment (in AWS).
+The project contains a JSON API powered primarily by the [change-maker](https://github.com/Joe8Bit/change-maker) NPM module. It's primary purpose is as a teaching aide to demonstrate: how to build a modular and decomposed NodeJS application; and, how to do continuous integration and deployment into a scalable (production) Docker environment (in AWS).
 
 This change making problem was picked to allow for the implementation of a (reasonably) complex but self contained algorithmic problem in JavaScript.
 
