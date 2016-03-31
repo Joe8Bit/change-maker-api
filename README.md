@@ -8,7 +8,7 @@
 [![Dependency status](https://david-dm.org/Joe8bit/change-maker-api/dev-status.svg)](https://david-dm.org/Joe8bit/change-maker-api#info=devDependencies&view=table)
 [![Code Climate](https://codeclimate.com/github/Joe8Bit/change-maker-api/badges/gpa.svg)](https://codeclimate.com/github/Joe8Bit/change-maker-api)
 
-[http://change-maker-api-55d4be1f.59b82038.svc.dockerapp.io/documentation](http://change-maker-api-55d4be1f.59b82038.svc.dockerapp.io/documentation)
+[http://api.change-maker.io/documentation](http://api.change-maker.io/documentation)
 
 The project contains a JSON API powered primarily by the [change-maker](https://github.com/Joe8Bit/change-maker) NPM module. It's primary purpose is as a teaching aide to demonstrate: how to build a modular and decomposed NodeJS application; and, how to do continuous integration and deployment into a scalable (production) Docker environment (in AWS).
 
@@ -28,7 +28,7 @@ GET /currencies/{currency_code}
 GET /currencies/{currency_code}/change
 ```
 
-Documentation for these routes are generated automatically and [exposed here](http://change-maker-api-55d4be1f.59b82038.svc.dockerapp.io/documentation).
+Documentation for these routes are generated automatically and [exposed here](http://api.change-maker.io/documentation).
 
 ### Development
 
