@@ -84,7 +84,7 @@ This app is continuously deployed in the following way:
 
 The application is currently deployed into a high availability cluster in Amazon Web Services, that cluster is provisioned and managed by Docker Cloud.
 
-The `change-api` container is currently deployed four times across two EC2 instances hosted in two `us-east` availabilty zones. The diagram below demonstrates this configuration.
+The `change-api` container is currently deployed 8 times times across four EC2 instances hosted in two `us-east` availabilty zones. The diagram below demonstrates this configuration.
 
 The `change-maker.io` domain is in a hosted zone Amazon's DNS service Route53. It points to CloudFront, Amazon's global CDN that functions as a reverse proxy/edge cache for the API.
 
