@@ -80,7 +80,13 @@ This app is continuously deployed in the following way:
 4. This container is then pushed automatically [into Docker Hub](https://hub.docker.com/r/joe8bit/change-maker-api/)
 5. Docker Hub then sends a webhook to Docker Cloud, Docker Cloud then handles the zero downtime deploy of the container into AWS using Docker Hubs 'high availability' mode.
 
-The container is currently deployed four times across two `micro` EC2 hosts in two `uas-east` availabilty Zones.
+## Production
+
+The application is currently deployed into a high availability cluster in Amazon Web Services, that cluster is provisioned and managed by Docker Cloud.
+
+The `change-api` container is currently deployed four times across two EC2 instances hosted in two `us-east` availabilty zones. The diagram below demonstrates this configuration.
+
+The `change-maker.io` domain is in a hosted zone Amazon's DNS service Route53. It points to CloudFront, Amazon's global CDN that functions as a reverse proxy/edge cache for the API.
 
 ![image](http://i.imgur.com/34XPvaP.png)
 [https://cloudcraft.co/view/a6ddad77-655a-4670-a06e-d78b4b290f18?key=iy8gmfxa9j5crgut](https://cloudcraft.co/view/a6ddad77-655a-4670-a06e-d78b4b290f18?key=iy8gmfxa9j5crgut)
