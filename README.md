@@ -82,6 +82,9 @@ This app is continuously deployed in the following way:
 
 The container is currently deployed four times across two `micro` EC2 hosts in two `uas-east` availabilty Zones.
 
+![image](http://i.imgur.com/34XPvaP.png)
+[https://cloudcraft.co/view/a6ddad77-655a-4670-a06e-d78b4b290f18?key=iy8gmfxa9j5crgut](https://cloudcraft.co/view/a6ddad77-655a-4670-a06e-d78b4b290f18?key=iy8gmfxa9j5crgut)
+
 
 ## Contrubuting
 
